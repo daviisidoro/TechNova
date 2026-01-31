@@ -1,0 +1,13 @@
+[
+  {
+    "id": "p1",
+    "name": "Carregador GaN 65W (USB-C + USB-A)",
+    "category": "Energia",
+    "price": 169.9,
+    "stock": 20,
+    "tags": ["Novo", "Recomendado"],
+    "desc": "Carregamento rápido e seguro...",
+    "featured": 10,
+    "image": "images/gan-65w.jpg"
+  }
+]

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova | Enterprise Systems</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&family=Plus+Jakarta+Sans:wght@300;400;600&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <div class="cyber-grid-bg"></div>
+    <div class="ambient-glow"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-top-row">
+            <div class="logo" onclick="switchTab('brand')">
+                <i class="fas fa-cube"></i> <span class="logo-text">TechNova</span>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn"><i class="fas fa-sun"></i></button>
+                <button id="cart-btn" class="icon-btn"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></button>
+            </div>
+        </div>
+        <div class="nav-center glass-pill">
+            <button class="nav-item active" onclick="switchTab('brand')">Corporativo</button>
+            <button class="nav-item" onclick="switchTab('store')">Loja</button>
+        </div>
+    </nav>
+
+    <main id="view-brand" class="view-section active">
+        <section class="hero brand-hero">
+            <div class="hero-content reveal">
+                <div class="status-badge"><span class="dot-pulse"></span> Sistema Online v21.0</div>
+                <h1 class="hero-title">Onde o Código <br><span class="gradient-text">Encontra a Matéria.</span></h1>
+                <p class="hero-desc">Somos arquitetos do invisível e engenheiros do tangível.</p>
+                <div class="btn-group">
+                    <button class="btn primary glow" onclick="scrollToId('mission')">Visão</button>
+                    <button class="btn secondary" onclick="switchTab('store')">Acessar Loja</button>
+                </div>
+            </div>
+            <div class="hero-visual reveal"><div class="card-3d"><i class="fas fa-network-wired"></i><div class="scan-line"></div></div></div>
+        </section>
+
+        <section id="mission" class="section-mission glass reveal">
+            <div class="mission-content">
+                <span class="tagline">// QUEM SOMOS</span>
+                <h2>Inovação sem Fronteiras.</h2>
+                <p>A TechNova é um laboratório de futuros possíveis, unindo software e hardware.</p>
+                <div class="mission-stats">
+                    <div><strong>+50</strong> Projetos</div>
+                    <div><strong>24/7</strong> Monitoramento</div>
+                    <div><strong>100%</strong> Proprietário</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tech-stack-strip">
+            <div class="stack-track">
+                <i class="fab fa-react"></i><i class="fab fa-python"></i><i class="fab fa-aws"></i><i class="fab fa-docker"></i>
+                <i class="fab fa-node-js"></i><i class="fab fa-rust"></i><i class="fas fa-microchip"></i><i class="fab fa-linux"></i>
+                <i class="fab fa-react"></i><i class="fab fa-python"></i><i class="fab fa-aws"></i><i class="fab fa-docker"></i>
+            </div>
+        </div>
+
+        <section id="skills" class="section-skills">
+            <div class="container">
+                <div class="section-header reveal"><span class="tagline">// EXPERTISE</span><h2>Domínio Tecnológico</h2></div>
+                <div class="skills-grid">
+                    <div class="skill-card glass reveal"><div class="icon-box"><i class="fas fa-code-branch"></i></div><h3>Full Stack</h3><p>Apps escaláveis.</p></div>
+                    <div class="skill-card glass reveal"><div class="icon-box"><i class="fas fa-robot"></i></div><h3>IA & Auto</h3><p>Machine Learning.</p></div>
+                    <div class="skill-card glass reveal"><div class="icon-box"><i class="fas fa-server"></i></div><h3>Cloud</h3><p>DevOps Moderno.</p></div>
+                    <div class="skill-card glass reveal"><div class="icon-box"><i class="fas fa-mobile-alt"></i></div><h3>IoT</h3><p>Hardware Conectado.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journal" class="section-journal">
+            <div class="container">
+                <div class="section-header reveal"><span class="tagline">// DATA LOGS</span><h2>Insights Tech</h2></div>
+                <div class="journal-grid">
+                    <article class="journal-card glass reveal">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500');"></div>
+                        <div class="card-body"><span class="date">Origem</span><h3>Wi-Fi & Espaço</h3><button class="neon-outline-btn" onclick="openArticle(1)">Ler Artigo</button></div>
+                    </article>
+                    <article class="journal-card glass reveal">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500');"></div>
+                        <div class="card-body"><span class="date">História</span><h3>O Primeiro Bug</h3><button class="neon-outline-btn" onclick="openArticle(2)">Ler Artigo</button></div>
+                    </article>
+                    <article class="journal-card glass reveal">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1517420879524-86d64ac2f339?w=500');"></div>
+                        <div class="card-body"><span class="date">Curiosidade</span><h3>1ª Webcam</h3><button class="neon-outline-btn" onclick="openArticle(3)">Ler Artigo</button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer class="glass-footer">
+            <div class="container footer-flex">
+                <div class="brand-info"><h3>TechNova.</h3><p>Forging Reality.</p></div>
+                <div class="social-links-grid">
+                    <a href="https://instagram.com/budwhale" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/daviisidoro" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://discord.gg/PmYYaRr5h9" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://wa.me/5511972802904" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <main id="view-store" class="view-section">
+        <section class="hero store-hero">
+            <div class="hero-content reveal">
+                <span class="tagline">// SUPPLY DROP</span>
+                <h1>Equipamentos<br><span class="gradient-text">High-End.</span></h1>
+            </div>
+        </section>
+        <section class="section-shop">
+            <div class="container">
+                <div class="store-toolbar glass reveal">
+                    <div class="filter-chips">
+                        <button class="chip active" data-filter="all">Todos</button>
+                        <button class="chip" data-filter="hardware">Hardware</button>
+                        <button class="chip" data-filter="perifericos">Periféricos</button>
+                        <button class="chip" data-filter="componentes">Componentes</button>
+                    </div>
+                    <div class="search-wrap">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="store-search" placeholder="Buscar...">
+                    </div>
+                </div>
+                <div id="product-grid" class="product-grid reveal"></div>
+            </div>
+        </section>
+        <footer class="glass-footer"><div class="container center-text"><p>TechNova Commerce Div. // Secure Protocol</p></div></footer>
+    </main>
+
+    <div class="tetris-wrapper minimized glass" id="tetris-wrapper">
+        <div class="tetris-header" id="tetris-toggle-btn">
+            <i class="fas fa-gamepad" id="main-tetris-icon"></i>
+            <span class="tetris-title-text">TERMINAL.EXE</span>
+            <i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="tetris-body">
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <div class="tetris-controls"><div id="score">SCORE: 0</div><button id="start-tetris" class="btn small">JOGAR</button></div>
+        </div>
+    </div>
+
+    <div class="social-float">
+        <a href="https://wa.me/5511972802904" target="_blank" class="social-btn glass"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/budwhale" target="_blank" class="social-btn glass"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.gg/PmYYaRr5h9" target="_blank" class="social-btn glass"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/daviisidoro" target="_blank" class="social-btn glass"><i class="fab fa-github"></i></a>
+    </div>
+
+    <div id="cart-sidebar" class="sidebar glass">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-box"></i> Carrinho</h2>
+            <button class="close-sidebar icon-btn-simple"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="cart-items" class="sidebar-body"></div>
+        <div class="sidebar-footer">
+            <div class="total-row"><span>TOTAL</span><span id="cart-total" class="neon-text">R$ 0,00</span></div>
+            <button id="btn-checkout-start" class="btn primary full glow">Finalizar</button>
+            <button id="btn-clear-cart" class="btn full" style="border: 1px solid #ff4757; color: #ff4757; background: transparent; margin-top: 10px;">Esvaziar</button>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="checkout-container glass">
+            <div class="checkout-header">
+                <h3>Pagamento</h3>
+                <button class="close-modal icon-btn-simple"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="progress-bar"><div class="fill" id="progress-fill"></div></div>
+            <div class="checkout-body">
+                <div id="step-1" class="step-content active">
+                    <h4>Identificação</h4><div class="input-group"><i class="fas fa-user"></i><input type="text" placeholder="Nome"></div>
+                    <button class="btn primary full" onclick="nextStep(2)">Próximo</button>
+                </div>
+                <div id="step-2" class="step-content">
+                    <h4>Pagamento</h4><div class="card-mock glass"><div class="chip-sim"></div><div class="card-num">**** 0000</div></div>
+                    <button class="btn primary full" onclick="processPayment()">Pagar</button>
+                </div>
+                <div id="step-3" class="step-content center-step"><div class="spinner"></div><h4>Processando...</h4></div>
+                <div id="step-4" class="step-content center-step"><i class="fas fa-check-circle neon-icon"></i><h4>Sucesso</h4><button class="btn secondary full" onclick="closeCheckout()">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="article-modal" class="modal-overlay">
+        <div class="article-container glass">
+            <button class="close-modal icon-btn-simple white-bg"><i class="fas fa-times"></i></button>
+            <div class="article-header-img" id="art-img"></div>
+            <div class="article-content"><span class="art-tag" id="art-tag">TAG</span><h1 id="art-title">Título</h1><div class="art-body" id="art-body"></div></div>
+        </div>
+    </div>
+
+    <div id="overlay-bg" class="overlay-bg"></div>
+    <script src="script.js"></script>
+</body>
+</html>
